@@ -7,7 +7,7 @@
         <StackLayout Orientation="Vertical">
             <Label Text="Are you an existing Fantastico Pizza customer? Sign In to order!"
                    HorizontalOptions="CenterAndExpand" />
-            
+      
             <StackLayout>
                 <Label Text="Username:"/>
                 <Entry Placeholder="Enter email address" />

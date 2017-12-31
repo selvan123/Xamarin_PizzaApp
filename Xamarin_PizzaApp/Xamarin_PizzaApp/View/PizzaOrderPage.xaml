@@ -1,10 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Xamarin_PizzaApp.View.PizzaOrderPage">
+             x:Class="Xamarin_PizzaApp.View.PizzaOrderPage"
+             Title="Order a Pizza">
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Build your pizza ordering form here" />
-        </StackLayout>
+        <TableView Intent="Form">
+            <TableRoot>
+                <TableSection Title="Select a Pizza Size">
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Vertical">
+                                <Picker HorizontalOptions="Center"
+                                        Title="Size and price for each pizza">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>Small ($8)</x:String>
+                                            <x:String>Medium ($12)</x:String>
+                                            <x:String>Large ($14)</x:String>
+                                            <x:String>Extra Large ($20)</x:String>
+                                            <x:String>Gargantuan ($30)</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="Select Pizza Toppings">
+                </TableSection>
+                <TableSection Title="Cheese Toppings">
+                    <SwitchCell Text="No Cheese" />
+                    <SwitchCell Text="Extra Cheese" />
+                </TableSection>
+                <TableSection Title="Meat Toppings">
+                    <SwitchCell Text="Pepperoni" />
+                    <SwitchCell Text="Sausage" />
+                    <SwitchCell Text="Canadian Bacon" />
+                    <SwitchCell Text="Bacon" />
+                </TableSection>
+                <TableSection Title="Vegetable Toppings">
+                    <SwitchCell Text="Mushrooms" />
+                    <SwitchCell Text="Green Peppers" />
+                    <SwitchCell Text="Onions" />
+                    <SwitchCell Text="Pineapple" />
+                </TableSection>
+                <TableSection Title="How many pizzas?">
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal"
+                                         HorizontalOptions="Center"
+                                         Padding="13,0">
+                                <Label x:Name="pizzaQuantityCount" 
+                                       Text="Pizza(s): 1"/>
+                                <Stepper Increment="1"
+                                         Minimum="1"
+                                         Maximum="30"
+                                         Value="1"
+                                         ValueChanged="OnPizzaQuantityChanged">
+                                </Stepper>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="Place Order">
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal"
+                                         HorizontalOptions="Center">
+                                <Button x:Name="btnOrderPizza"
+                                        Text="Place Pizza Order"
+                                        IsEnabled="False"></Button>
+                                <Button x:Name="btnClearPizzaOrder"
+                                        Text="Clear Pizza Order"
+                                        IsEnabled="False"></Button>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
     </ContentPage.Content>
 </ContentPage>

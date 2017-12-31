@@ -19,7 +19,7 @@ namespace Xamarin_PizzaApp.View
 
         void OnPizzaQuantityChanged(object sender, ValueChangedEventArgs e)
         {
-            //pizzaQuantityCount.Text = String.Format("Number of Pizzas: {0}", e.NewValue);
+            pizzaQuantityCount.Text = String.Format("Pizza(s): {0}", e.NewValue);
         }
     }
 }
