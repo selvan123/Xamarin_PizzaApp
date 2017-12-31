@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin_PizzaApp.View.PizzaLoginPage"
+             Title="Welcome to Fantastico Pizza!">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Label Text="Are you an existing Fantastico Pizza customer? Sign In to order!"
+                   HorizontalOptions="CenterAndExpand" />
+            
+            <StackLayout>
+                <Label Text="Username:"/>
+                <Entry Placeholder="Enter email address" />
+                <Label Text="Password:" />
+                <Entry Placeholder="Enter your password"
+                       IsPassword="True" />
+                <Button Text="Sign In" ></Button>
+                <Button Text="Forgot Password?"></Button>
+            </StackLayout>
+            
+            <StackLayout>
+                <Label Text="New Customer? Sign up here!" />
+                <Button Text="Sign Up!"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using Xamarin_PizzaApp.View;
 
 namespace Xamarin_PizzaApp
 {
@@ -13,8 +14,9 @@ namespace Xamarin_PizzaApp
 		{
 			InitializeComponent();
 
-			MainPage = new Xamarin_PizzaApp.MainPage();
-		}
+            //MainPage = new NavigationPage(new PizzaLoginPage());
+            MainPage = new NavigationPage(new NewCustomerSignUpPage());
+        }
 
 		protected override void OnStart ()
 		{
