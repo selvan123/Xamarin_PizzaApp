@@ -24,7 +24,7 @@
                     <ViewCell>
                         <ViewCell.View>
                             <StackLayout Orientation="Horizontal">
-                                <Button Text="Submit"
+                                <Button Text="Continue"
                                         IsEnabled="False"></Button>
                                 <Button Text="Clear"
                                         IsEnabled="True" ></Button>

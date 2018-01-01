@@ -1,19 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Xamarin_PizzaApp;assembly=Xamarin_PizzaApp"
              x:Class="Xamarin_PizzaApp.View.PizzaLoginPage"
              Title="Welcome to Fantastico Pizza!">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
-            <Label Text="Fantastico Pizza"
+            <Label HorizontalOptions="Center"
+                   Text="Fantastico Pizza"
                    TextColor="DeepSkyBlue"
                    FontSize="Large"/>
-            <Label Text="Are you an existing Fantastico Pizza customer? Sign In to order!"
-                   HorizontalOptions="CenterAndExpand" />
-      
-            <StackLayout>
-                <Label Text="Username:"/>
-                <Entry Placeholder="Enter email address" />
+            <Image Source="{local:ImageResource Xamarin_PizzaApp.fantastico_pizza_man.jpg}" />
+            <Label Text="Are you an existing Fantastico Pizza customer?"
+                   HorizontalOptions="Center"
+                   FontSize="Micro"/>
+            <Label Text="Sign in to order!"
+                   HorizontalOptions="Center"
+                   FontSize="Micro"/>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Username:"
+                       HorizontalOptions="Start"/>
+                <Entry Placeholder="example@gmail.com" 
+                       Keyboard="Email"/>
                 <Label Text="Password:" />
                 <Entry Placeholder="Enter your password"
                        IsPassword="True" />

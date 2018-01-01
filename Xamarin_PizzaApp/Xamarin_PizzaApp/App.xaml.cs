@@ -14,10 +14,10 @@ namespace Xamarin_PizzaApp
 		{
 			InitializeComponent();
 
-            //MainPage = new NavigationPage(new PizzaLoginPage());
+            MainPage = new NavigationPage(new PizzaLoginPage());
             //MainPage = new NavigationPage(new NewCustomerSignUpPage());
             //MainPage = new NavigationPage(new PizzaOrderPage());
-            MainPage = new NavigationPage(new OrderPaymentPage());
+            //MainPage = new NavigationPage(new OrderPaymentPage());
         }
 
 		protected override void OnStart ()
