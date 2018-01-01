@@ -2,12 +2,95 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Xamarin_PizzaApp.View.OrderPaymentPage"
-             Title="Place Order">
+             Title="Enter Payment Information">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Give order total and process payment in same page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <TableView Intent="Form">
+            <TableRoot>
+                <TableSection Title="Credit Card Information">
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Card Type"
+                                       Margin="5"
+                                       VerticalOptions="Center"/>
+                                <Picker Title="Choose a Card Type"
+                                        VerticalOptions="Center">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>Visa</x:String>
+                                            <x:String>Mastercard</x:String>
+                                            <x:String>Discover</x:String>
+                                            <x:String>American Express</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                    <EntryCell Label="Credit Card Number" />
+                </TableSection>
+                <TableSection Title="Credit Card Expiration Information">
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Exp. Month" 
+                                       VerticalOptions="Center"/>
+                                <Picker Title="Choose Exp. Month"
+                                        VerticalOptions="Center">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:Int32}">
+                                            <x:Int32>1</x:Int32>
+                                            <x:Int32>2</x:Int32>
+                                            <x:Int32>3</x:Int32>
+                                            <x:Int32>4</x:Int32>
+                                            <x:Int32>5</x:Int32>
+                                            <x:Int32>6</x:Int32>
+                                            <x:Int32>7</x:Int32>
+                                            <x:Int32>8</x:Int32>
+                                            <x:Int32>9</x:Int32>
+                                            <x:Int32>10</x:Int32>
+                                            <x:Int32>11</x:Int32>
+                                            <x:Int32>12</x:Int32>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Exp. Year"
+                                       VerticalOptions="Center"/>
+                                <Picker Title=" Choose Exp. Year"
+                                        VerticalOptions="Center">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:Int32}">
+                                            <x:Int32>2023</x:Int32>
+                                            <x:Int32>2022</x:Int32>
+                                            <x:Int32>2021</x:Int32>
+                                            <x:Int32>2020</x:Int32>
+                                            <x:Int32>2019</x:Int32>
+                                            <x:Int32>2018</x:Int32>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </TableSection>
+                <TableSection>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Button Text="Ok"
+                                        VerticalOptions="End"></Button>
+                                <Button Text="Cancel"></Button> 
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
     </ContentPage.Content>
 </ContentPage>

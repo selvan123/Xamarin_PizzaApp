@@ -16,5 +16,11 @@ namespace Xamarin_PizzaApp.View
 		{
 			InitializeComponent ();
 		}
-	}
+
+        //This will need to be moved.
+        async void OnNewCustomerSignUp(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NewCustomerSignUpPage());
+        }
+    }
 }

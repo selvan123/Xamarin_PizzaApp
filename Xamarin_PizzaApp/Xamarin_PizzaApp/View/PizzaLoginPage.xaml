@@ -5,6 +5,9 @@
              Title="Welcome to Fantastico Pizza!">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
+            <Label Text="Fantastico Pizza"
+                   TextColor="DeepSkyBlue"
+                   FontSize="Large"/>
             <Label Text="Are you an existing Fantastico Pizza customer? Sign In to order!"
                    HorizontalOptions="CenterAndExpand" />
       
@@ -14,13 +17,17 @@
                 <Label Text="Password:" />
                 <Entry Placeholder="Enter your password"
                        IsPassword="True" />
-                <Button Text="Sign In" ></Button>
-                <Button Text="Forgot Password?"></Button>
+                <Button Text="Sign In"
+                        IsEnabled="False"></Button>
+                <Button Text="Forgot Password?"
+                        IsEnabled="False"></Button>
             </StackLayout>
             
             <StackLayout>
                 <Label Text="New Customer? Sign up here!" />
-                <Button Text="Sign Up!"></Button>
+                <Button x:Name="btnSignUp"
+                        Text="Sign Up!"
+                        Clicked="OnNewCustomerSignUp"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

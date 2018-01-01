@@ -2,35 +2,37 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Xamarin_PizzaApp.View.NewCustomerSignUpPage"
-             Title="New Customer Information" >
+             Title="New Fantastico Pizza Account" >
 
     <ContentPage.Content>
-        <ScrollView Orientation="Vertical">
-            <StackLayout>
-                <Label Text="* Indicates a required field" />
-            </StackLayout>
-            <StackLayout>
-                <Label Text="* First Name:" />
-                <Entry Placeholder="What is your first name?"/>
-                <Label Text="Middle Initial:"/>
-                <Entry Placeholder="What is your middle initial?" />
-                <Label Text="* Last Name:"/>
-                <Entry Placeholder="Your last name" />
-            </StackLayout>
-            <StackLayout>
-                <Label Text="* Address1:" />
-                <Entry Placeholder="Enter street address" />
-                <Label Text="Address2:"/>
-                <Entry Placeholder="Apt, Suite, etc." />
-                <Label Text="* City:" />
-                <Entry Placeholder="What city are you in?"/>
-                <Label Text="* Zipcode" />
-                <Entry Placeholder="Enter your 5 digit zipcode" />
-            </StackLayout>
-            <StackLayout>
-                <Button Text="Submit" />
-                <Button Text="Clear" />
-            </StackLayout>
-        </ScrollView>
+        <TableView Intent="Form">
+            <TableRoot>
+                <TableSection Title="Customer Name, Phone Number, and Email Address">
+                    <EntryCell Label="First Name:"/>
+                    <EntryCell Label="Last Name:"/>
+                    <EntryCell Label="Phone Number:" />
+                    <EntryCell Label="Email:" />
+                </TableSection>
+                <TableSection Title="Customer Address Information">
+                    <EntryCell Label="Address1:" />
+                    <EntryCell Label="Address2:"/>
+                    <EntryCell Label="City:"/>
+                    <EntryCell Label="State:"/>
+                    <EntryCell Label="Zipcode:"/>
+                </TableSection>
+                <TableSection Title="Actions">
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Button Text="Submit"
+                                        IsEnabled="False"></Button>
+                                <Button Text="Clear"
+                                        IsEnabled="True" ></Button>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
     </ContentPage.Content>
 </ContentPage>
